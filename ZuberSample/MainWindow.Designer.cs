@@ -34,17 +34,9 @@
             this.viewDriversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAdministratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteDriverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteAdministratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewDriverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewAdministratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateDriverListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateAdministratorListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateCustomerListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -56,9 +48,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewToolStripMenuItem,
-            this.deleteToolStripMenuItem,
             this.addToolStripMenuItem,
-            this.updateToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -79,51 +69,23 @@
             // viewDriversToolStripMenuItem
             // 
             this.viewDriversToolStripMenuItem.Name = "viewDriversToolStripMenuItem";
-            this.viewDriversToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewDriversToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.viewDriversToolStripMenuItem.Text = "View Drivers";
             this.viewDriversToolStripMenuItem.Click += new System.EventHandler(this.viewDriversToolStripMenuItem_Click);
             // 
             // viewAdministratorToolStripMenuItem
             // 
             this.viewAdministratorToolStripMenuItem.Name = "viewAdministratorToolStripMenuItem";
-            this.viewAdministratorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewAdministratorToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.viewAdministratorToolStripMenuItem.Text = "View Administrator";
             this.viewAdministratorToolStripMenuItem.Click += new System.EventHandler(this.viewAdministratorToolStripMenuItem_Click);
             // 
             // viewCustomersToolStripMenuItem
             // 
             this.viewCustomersToolStripMenuItem.Name = "viewCustomersToolStripMenuItem";
-            this.viewCustomersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewCustomersToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.viewCustomersToolStripMenuItem.Text = "View Customers";
             this.viewCustomersToolStripMenuItem.Click += new System.EventHandler(this.viewCustomersToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteDriverToolStripMenuItem,
-            this.deleteAdministratorToolStripMenuItem,
-            this.deleteCustomerToolStripMenuItem});
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // deleteDriverToolStripMenuItem
-            // 
-            this.deleteDriverToolStripMenuItem.Name = "deleteDriverToolStripMenuItem";
-            this.deleteDriverToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.deleteDriverToolStripMenuItem.Text = "Delete Driver";
-            // 
-            // deleteAdministratorToolStripMenuItem
-            // 
-            this.deleteAdministratorToolStripMenuItem.Name = "deleteAdministratorToolStripMenuItem";
-            this.deleteAdministratorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.deleteAdministratorToolStripMenuItem.Text = "Delete Administrator";
-            // 
-            // deleteCustomerToolStripMenuItem
-            // 
-            this.deleteCustomerToolStripMenuItem.Name = "deleteCustomerToolStripMenuItem";
-            this.deleteCustomerToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.deleteCustomerToolStripMenuItem.Text = "Delete Customer";
             // 
             // addToolStripMenuItem
             // 
@@ -147,34 +109,6 @@
             this.addNewAdministratorToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.addNewAdministratorToolStripMenuItem.Text = "Add New Administrator";
             this.addNewAdministratorToolStripMenuItem.Click += new System.EventHandler(this.addNewAdministratorToolStripMenuItem_Click);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateDriverListToolStripMenuItem,
-            this.updateAdministratorListToolStripMenuItem,
-            this.updateCustomerListToolStripMenuItem});
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.updateToolStripMenuItem.Text = "Update";
-            // 
-            // updateDriverListToolStripMenuItem
-            // 
-            this.updateDriverListToolStripMenuItem.Name = "updateDriverListToolStripMenuItem";
-            this.updateDriverListToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.updateDriverListToolStripMenuItem.Text = "Update Driver List";
-            // 
-            // updateAdministratorListToolStripMenuItem
-            // 
-            this.updateAdministratorListToolStripMenuItem.Name = "updateAdministratorListToolStripMenuItem";
-            this.updateAdministratorListToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.updateAdministratorListToolStripMenuItem.Text = "Update Administrator List";
-            // 
-            // updateCustomerListToolStripMenuItem
-            // 
-            this.updateCustomerListToolStripMenuItem.Name = "updateCustomerListToolStripMenuItem";
-            this.updateCustomerListToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
-            this.updateCustomerListToolStripMenuItem.Text = "Update Customer List";
             // 
             // exitToolStripMenuItem
             // 
@@ -229,17 +163,9 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem viewAdministratorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewCustomersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteDriverToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteAdministratorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewDriverToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewAdministratorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateDriverListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateAdministratorListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateCustomerListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
