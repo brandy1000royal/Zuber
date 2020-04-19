@@ -46,13 +46,15 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewToolStripMenuItem,
             this.addToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1356, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,27 +65,27 @@
             this.viewAdministratorToolStripMenuItem,
             this.viewCustomersToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewDriversToolStripMenuItem
             // 
             this.viewDriversToolStripMenuItem.Name = "viewDriversToolStripMenuItem";
-            this.viewDriversToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.viewDriversToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.viewDriversToolStripMenuItem.Text = "View Drivers";
             this.viewDriversToolStripMenuItem.Click += new System.EventHandler(this.viewDriversToolStripMenuItem_Click);
             // 
             // viewAdministratorToolStripMenuItem
             // 
             this.viewAdministratorToolStripMenuItem.Name = "viewAdministratorToolStripMenuItem";
-            this.viewAdministratorToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.viewAdministratorToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.viewAdministratorToolStripMenuItem.Text = "View Administrator";
             this.viewAdministratorToolStripMenuItem.Click += new System.EventHandler(this.viewAdministratorToolStripMenuItem_Click);
             // 
             // viewCustomersToolStripMenuItem
             // 
             this.viewCustomersToolStripMenuItem.Name = "viewCustomersToolStripMenuItem";
-            this.viewCustomersToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.viewCustomersToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.viewCustomersToolStripMenuItem.Text = "View Customers";
             this.viewCustomersToolStripMenuItem.Click += new System.EventHandler(this.viewCustomersToolStripMenuItem_Click);
             // 
@@ -93,55 +95,58 @@
             this.addNewDriverToolStripMenuItem,
             this.addNewAdministratorToolStripMenuItem});
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.addToolStripMenuItem.Text = "Add";
             // 
             // addNewDriverToolStripMenuItem
             // 
             this.addNewDriverToolStripMenuItem.Name = "addNewDriverToolStripMenuItem";
-            this.addNewDriverToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.addNewDriverToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
             this.addNewDriverToolStripMenuItem.Text = "Add New Driver";
             this.addNewDriverToolStripMenuItem.Click += new System.EventHandler(this.addNewDriverToolStripMenuItem_Click);
             // 
             // addNewAdministratorToolStripMenuItem
             // 
             this.addNewAdministratorToolStripMenuItem.Name = "addNewAdministratorToolStripMenuItem";
-            this.addNewAdministratorToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.addNewAdministratorToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
             this.addNewAdministratorToolStripMenuItem.Text = "Add New Administrator";
             this.addNewAdministratorToolStripMenuItem.Click += new System.EventHandler(this.addNewAdministratorToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 727);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1356, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
             this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1356, 749);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.Load += new System.EventHandler(this.MainWindow_Load);
