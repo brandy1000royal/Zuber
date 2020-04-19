@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZuberSample.Models
 {
-    class Admins
+    public class Admins
     {
         public int Id { get; set; }
         public string Name { get; set; }

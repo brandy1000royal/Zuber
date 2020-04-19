@@ -28,13 +28,15 @@ namespace ZuberSample
             //var item = Data.admins[e.RowIndex];
             //Console.WriteLine(e.RowIndex);
 
-            //object obj = this.dataGridView1[e.ColumnIndex, e.RowIndex];
-            //string buttonname = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
-            //if (buttonname == "Delete")
-            //{
-            //    Data.admins.RemoveAt(e.RowIndex);
-            //    MessageBox.Show("Item Deleted");
-            //}
+            if (e.ColumnIndex == 1)
+            {
+                var item = Data.admins[e.RowIndex];
+                var form= new UpdateAdmin();
+                form.setdata(item);
+                form.ShowDialog();
+                RefreshData();
+                
+            }
             //if (buttonname == "Update")
             //{
 
