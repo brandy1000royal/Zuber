@@ -19,6 +19,7 @@ namespace ZuberSample
         ViewCustomers viewCustomersForm;
         AddAdmin addAdmin;
         AddDriver addDriver;
+
        
         public MainWindow()
         {
@@ -32,7 +33,7 @@ namespace ZuberSample
             viewAdminsForm.MdiParent = this;
             viewCustomersForm = new ViewCustomers();
             viewCustomersForm.MdiParent = this;
-            addDriver = new AddDriver();
+            addDriver = new AddDriver(viewDriversForm);
             addDriver.MdiParent = this;
             addAdmin = new AddAdmin(viewAdminsForm);
             addAdmin.MdiParent = this;
@@ -124,6 +125,11 @@ namespace ZuberSample
         {
             addAdmin.Show();
             addAdmin.Focus();
+        }
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Application Closing");
+            Application.Exit();
         }
     }
 }

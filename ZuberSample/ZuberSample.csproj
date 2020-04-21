@@ -77,6 +77,12 @@
     <Compile Include="DeleteDriver.Designer.cs">
       <DependentUpon>DeleteDriver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\UpdateDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\UpdateDriver.Designer.cs">
+      <DependentUpon>UpdateDriver.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomers.Designer.cs">
+      <DependentUpon>UpdateCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +139,9 @@
     <EmbeddedResource Include="DeleteDriver.resx">
       <DependentUpon>DeleteDriver.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Models\UpdateDriver.resx">
+      <DependentUpon>UpdateDriver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateAdmin.resx">
       <DependentUpon>UpdateAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +160,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateCustomers.resx">
+      <DependentUpon>UpdateCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewCustomers.resx">
       <DependentUpon>ViewCustomers.cs</DependentUpon>
     </EmbeddedResource>

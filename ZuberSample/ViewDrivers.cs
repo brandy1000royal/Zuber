@@ -24,30 +24,32 @@ namespace ZuberSample
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var item = Data.drivers[e.RowIndex];
-            //Console.WriteLine(e.RowIndex);
-            MessageBox.Show("Item Clicked " + e.RowIndex);
+            if (e.ColumnIndex == 1)
+            {
+                var item = Data.drivers[e.RowIndex];
+                var form = new UpdateDriver();
+                form.setdata(item);
+                form.ShowDialog();
+                RefreshData();
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+            }
         }
 
 
         internal void RefreshData()
         {
-            dataGridView1.DataSource = Data.admins;
+            dataGridView1.DataSource = null;
+            dataGridView1.Columns.Clear();
 
             //https://stackoverflow.com/questions/7916919/adding-a-button-to-a-winforms-datagridview/7930582#7930582?newreg=5e0f4c7397e94074aeedf619beef2642
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            DataGridViewCheckBoxColumn btn = new DataGridViewCheckBoxColumn();
             dataGridView1.Columns.Add(btn);
             btn.HeaderText = "";
-            btn.Text = "Delete";
-            btn.Name = "btn";
-            btn.UseColumnTextForButtonValue = true;
+            btn.Name = "check";
+            btn.FalseValue = false;
+            btn.TrueValue = true;
 
+            dataGridView1.DataSource = Data.drivers;
 
             DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
             dataGridView1.Columns.Add(btn1);
@@ -59,20 +61,39 @@ namespace ZuberSample
 
             dataGridView1.Update();
         }
-
-        private void ViewAdmins_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
+       
 
         // https://stackoverflow.com/questions/2021681/hide-form-instead-of-closing-when-close-button-clicked
-        private void ViewAdmins_FormClosing(object sender, FormClosingEventArgs e)
+        private void ViewDriver_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 e.Cancel = true;
                 Hide();
             }
+        }
+
+        private void buttondelete_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Data.drivers.Count; i++)
+            {
+                if (dataGridView1[0, i].Value == null)
+                {
+                    continue;
+                }
+                if ((bool)dataGridView1[0, i].Value == true)
+                {
+
+                    Data.drivers.RemoveAt(i);
+
+                    i--;
+                    MessageBox.Show("Item Deleted");
+
+                }
+            }
+
+
+            RefreshData();
         }
     }
 }

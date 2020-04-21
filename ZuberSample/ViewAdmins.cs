@@ -12,8 +12,10 @@ using ZuberSample.Models;
 namespace ZuberSample
 {
     // https://stackoverflow.com/questions/15811254/how-to-set-datasource-to-a-datagridview-control-in-c-sharp
+   
     public partial class ViewAdmins : Form
     {
+        
         
         public ViewAdmins()
         {
@@ -25,9 +27,6 @@ namespace ZuberSample
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //var item = Data.admins[e.RowIndex];
-            //Console.WriteLine(e.RowIndex);
-
             if (e.ColumnIndex == 1)
             {
                 var item = Data.admins[e.RowIndex];
@@ -37,12 +36,6 @@ namespace ZuberSample
                 RefreshData();
                 
             }
-            //if (buttonname == "Update")
-            //{
-
-            //}
-            //RefreshData();
-            //dataGridView1.Update();
         }
 
         internal void RefreshData()
@@ -87,9 +80,8 @@ namespace ZuberSample
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            //object obj = this.dataGridView1[e.ColumnIndex, e.RowIndex];
-            //string buttonname = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
+           {
+           
         }
 
         private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -99,8 +91,7 @@ namespace ZuberSample
 
         private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //object obj = this.dataGridView1[e.ColumnIndex, e.RowIndex];
-            //string buttonname = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
+            
         }
 
         private void button1delete_Click(object sender, EventArgs e)
@@ -125,6 +116,15 @@ namespace ZuberSample
             
             RefreshData();
 
+        }
+
+        private void buttoncreate_Click(object sender, EventArgs e)
+        {
+           
+           /* AddAdmin addadmin = new AddAdmin();
+            addadmin.Show();
+            RefreshData();
+            */
         }
     }
 }
