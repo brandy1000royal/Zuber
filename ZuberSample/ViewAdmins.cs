@@ -121,10 +121,10 @@ namespace ZuberSample
         private void buttoncreate_Click(object sender, EventArgs e)
         {
            
-           /* AddAdmin addadmin = new AddAdmin();
+            AddAdmin addadmin = new AddAdmin(this);
             addadmin.Show();
             RefreshData();
-            */
+            
         }
     }
 }

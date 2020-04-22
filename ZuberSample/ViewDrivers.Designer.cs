@@ -40,7 +40,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(919, 236);
@@ -50,7 +50,7 @@
             // buttondelete
             // 
             this.buttondelete.Location = new System.Drawing.Point(943, 511);
-            this.buttondelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttondelete.Margin = new System.Windows.Forms.Padding(4);
             this.buttondelete.Name = "buttondelete";
             this.buttondelete.Size = new System.Drawing.Size(100, 28);
             this.buttondelete.TabIndex = 1;
@@ -61,7 +61,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 0;
@@ -75,6 +75,7 @@
             this.buttoncreate.TabIndex = 2;
             this.buttoncreate.Text = "Create";
             this.buttoncreate.UseVisualStyleBackColor = true;
+            this.buttoncreate.Click += new System.EventHandler(this.buttoncreate_Click);
             // 
             // ViewDrivers
             // 
@@ -86,7 +87,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttondelete);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewDrivers";
             this.Text = "ViewDrivers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

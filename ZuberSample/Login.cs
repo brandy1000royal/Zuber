@@ -33,21 +33,25 @@ namespace ZuberSample
             {
                 MessageBox.Show("Please Enter Password");
             }
-         
-            
-            //if (username==theusername && thepassword == password)
-            if (true)
-                {
-                // create new forms
-                var main = new MainWindow();
-                main.Show();
-                this.Close();
-            }
-            else
+
+
+            if (username == theusername && thepassword == password)
             {
-                MessageBox.Show("Username or Password is invalid");
-                textBoxpassword.Text = "";
-                textBoxusername.Text = "";
+
+                if (true)
+                {
+                    // create new forms
+                    var main = new MainWindow();
+                    main.Show();
+                    this.Close();
+                }
+                else
+                {
+
+                    MessageBox.Show("Username or Password is invalid");
+                    textBoxpassword.Text = "";
+                    textBoxusername.Text = "";
+                }
             }
         }
     }

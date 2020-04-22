@@ -95,6 +95,15 @@ namespace ZuberSample
 
             RefreshData();
         }
+
+        private void buttoncreate_Click(object sender, EventArgs e)
+        {
+
+            AddDriver adddriver = new AddDriver (this);
+            adddriver.Show();
+            RefreshData();
+
+        }
     }
 }
     

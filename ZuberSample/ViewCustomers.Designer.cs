@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCustomers));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttondelete = new System.Windows.Forms.Button();
-            this.buttoncreate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,7 +38,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1015, 210);
@@ -49,7 +48,7 @@
             // buttondelete
             // 
             this.buttondelete.Location = new System.Drawing.Point(943, 511);
-            this.buttondelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttondelete.Margin = new System.Windows.Forms.Padding(4);
             this.buttondelete.Name = "buttondelete";
             this.buttondelete.Size = new System.Drawing.Size(100, 28);
             this.buttondelete.TabIndex = 1;
@@ -57,26 +56,15 @@
             this.buttondelete.UseVisualStyleBackColor = true;
             this.buttondelete.Click += new System.EventHandler(this.buttondelete_Click);
             // 
-            // buttoncreate
-            // 
-            this.buttoncreate.Location = new System.Drawing.Point(835, 511);
-            this.buttoncreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttoncreate.Name = "buttoncreate";
-            this.buttoncreate.Size = new System.Drawing.Size(100, 28);
-            this.buttoncreate.TabIndex = 2;
-            this.buttoncreate.Text = "Create";
-            this.buttoncreate.UseVisualStyleBackColor = true;
-            // 
             // ViewCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.buttoncreate);
             this.Controls.Add(this.buttondelete);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewCustomers";
             this.Text = "ViewDrivers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -88,6 +76,5 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttondelete;
-        private System.Windows.Forms.Button buttoncreate;
     }
 }
