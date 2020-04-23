@@ -18,41 +18,46 @@ namespace ZuberSample
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {            
             //todo: verify credentials
             var thepassword = "Manager";
             var theusername = "Zuber";
             string username = textBoxusername.Text.Trim();
             var password = textBoxpassword.Text;
+            var isValid = true;
 
             if (username == null)
             {
                 MessageBox.Show("Please Enter Username");
+                isValid = false;
             }
             if (password== null)
             {
                 MessageBox.Show("Please Enter Password");
+                isValid = false;
             }
 
 
-            if (username == theusername && thepassword == password)
+            if (username == theusername && password == thepassword)
             {
 
-                if (true)
+
+                if (isValid)
                 {
                     // create new forms
                     var main = new MainWindow();
                     main.Show();
                     this.Close();
                 }
-                else
-                {
-
-                    MessageBox.Show("Username or Password is invalid");
-                    textBoxpassword.Text = "";
-                    textBoxusername.Text = "";
-                }
             }
+            else if (username != theusername && password != thepassword)
+            {
+
+                MessageBox.Show("Username or Password is invalid");
+                textBoxpassword.Text = "";
+                textBoxusername.Text = "";
+            }
+            
         }
     }
 }
