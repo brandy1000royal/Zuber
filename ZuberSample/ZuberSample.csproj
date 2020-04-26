@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +67,12 @@
     <Compile Include="AddDriver.Designer.cs">
       <DependentUpon>AddDriver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin.cs">
+      <DependentUpon>Zuber_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>Zuber_db.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data.cs" />
     <Compile Include="DeleteAdmin.cs">
       <SubType>Form</SubType>
@@ -76,6 +91,9 @@
     </Compile>
     <Compile Include="DeleteDriver.Designer.cs">
       <DependentUpon>DeleteDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drivers.cs">
+      <DependentUpon>Zuber_db.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UpdateDriver.cs">
       <SubType>Form</SubType>
@@ -130,6 +148,21 @@
     <Compile Include="ViewDrivers.Designer.cs">
       <DependentUpon>ViewDrivers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Zuber_db.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zuber_db.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Zuber_db.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zuber_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Zuber_db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Zuber_db.edmx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +205,7 @@
     <EmbeddedResource Include="ViewDrivers.resx">
       <DependentUpon>ViewDrivers.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -181,9 +215,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="Zuber_db.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Zuber_db.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Zuber_db.edmx.diagram">
+      <DependentUpon>Zuber_db.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Zuber_db.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Zuber_db.Context.cs</LastGenOutput>
+      <DependentUpon>Zuber_db.edmx</DependentUpon>
+    </Content>
+    <Content Include="Zuber_db.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Zuber_db.edmx</DependentUpon>
+      <LastGenOutput>Zuber_db.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

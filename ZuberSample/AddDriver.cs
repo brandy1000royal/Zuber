@@ -14,10 +14,12 @@ namespace ZuberSample
     public partial class AddDriver : Form
     { 
         ViewDrivers viewDriver;
+        private readonly Zuber_dbEntities zuber_Db;
         public AddDriver (ViewDrivers viewDriver)
         {
             this.viewDriver = viewDriver;
             InitializeComponent();
+            zuber_Db = new Zuber_dbEntities();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -35,6 +37,15 @@ namespace ZuberSample
                 Post = textBoxadddriverpost.Text,
                 CarType = textBoxadddrivercartype.Text
             });
+
+            var drive = new Drivers();
+            drive.Name = textBoxadddrivername.Text;
+            drive.Post = textBoxadddriverpost.Text;
+            drive.CarType = textBoxadddrivercartype.Text;
+
+            zuber_Db.Drivers.Add(drive);
+            zuber_Db.SaveChanges();
+
 
             this.Close();
 
